@@ -1,0 +1,104 @@
+/* --- Color Palette & Global Styles --- */
+:root {
+    /* Primary colors - Yahoo Brand Palette */
+    --yahoo-purple: #6000D3;
+    /* Yahoo purple for headers, navigation, and key accents */
+    --clean-white: #FFFFFF;
+    /* Clean white background for articles and content areas */
+
+    /* Secondary colors */
+    --yahoo-red: #E50914;
+    /* Yahoo red for highlights, section labels, breaking news */
+    --text-gray: #5a6573;
+    /* Gray for subheadings, timestamps, secondary text */
+
+    /* Support colors */
+    --light-purple-bg: #F5F3F8;
+    /* Soft purple-tinted gray for sidebars or background blocks */
+    --yahoo-purple-button: #6000D3;
+    /* Yahoo purple for buttons or interactive elements */
+
+    /* Legacy variable mappings for compatibility */
+    --navy-blue: var(--yahoo-purple);
+    --sky-blue: var(--yahoo-purple);
+    --evergreen: var(--yahoo-purple);
+    --soft-white: var(--clean-white);
+    --brick-red: var(--yahoo-red);
+    --sunset-orange: var(--yahoo-red);
+    --steel-gray: var(--text-gray);
+    --slate-gray: var(--text-gray);
+    --sand-beige: var(--light-purple-bg);
+    --light-gray: var(--light-purple-bg);
+    --header-text: var(--clean-white);
+    --background-color: var(--clean-white);
+    --text-color: #2c3e50;
+    --card-bg: var(--clean-white);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    /* Dark mode adaptations of Yahoo palette */
+    --yahoo-purple: #7B3FE0;
+    /* Lighter, brighter Yahoo purple for dark mode visibility and contrast */
+    --clean-white: #1e1e1e;
+    /* Slightly lighter dark background */
+    --yahoo-red: #FF3A44;
+    /* Brighter Yahoo red for dark mode visibility */
+    --text-gray: #d1d5db;
+    /* Much lighter gray for better text contrast in dark mode */
+    --light-purple-bg: #2d2535;
+    /* Dark purple-gray for dark mode backgrounds */
+    --yahoo-purple-button: #7B3FE0;
+    /* Lighter Yahoo purple for dark mode visibility */
+
+    /* Legacy variable mappings for compatibility */
+    --navy-blue: var(--yahoo-purple);
+    --sky-blue: var(--yahoo-purple);
+    --evergreen: var(--yahoo-purple);
+    --soft-white: var(--clean-white);
+    --brick-red: var(--yahoo-red);
+    --sunset-orange: var(--yahoo-red);
+    --steel-gray: var(--text-gray);
+    --slate-gray: var(--text-gray);
+    --sand-beige: var(--light-purple-bg);
+    --light-gray: var(--light-purple-bg);
+    --header-text: #f3f4f6;
+    /* Brighter header text for better contrast */
+    --background-color: var(--clean-white);
+    --text-color: #e5e7eb;
+    /* Much lighter main text color for better contrast */
+    --card-bg: #2c3e50;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced contrast for dark mode text elements */
+[data-theme="dark"] .card-content p {
+    color: #e5e7eb;
+    /* Even lighter for card descriptions in dark mode */
+}
+
+[data-theme="dark"] .card-content h3 {
+    color: #9B5FE8;
+    /* Brighter Yahoo purple for card headings in dark mode */
+}
+
+[data-theme="dark"] .news-section h2 {
+    color: #9B5FE8;
+    /* Brighter Yahoo purple for section headings in dark mode */
+}
+
+[data-theme="dark"] .quick-access-menu h2 {
+    color: #9B5FE8;
+    /* Brighter Yahoo purple for sidebar headings in dark mode */
+}
+
+[data-theme="dark"] .right-sidebar .widget h3 {
+    color: #9B5FE8;
+    /* Brighter Yahoo purple for widget headings in dark mode */
+}
+
+[data-theme="dark"] .weather-temp,
+[data-theme="dark"] .weather-city {
+    color: #d1d5db;
+    /* Lighter text for weather widget in dark mode */
+}

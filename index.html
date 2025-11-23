@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NaviNest - Your News Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="sticky-header">
+    <div class="container">
+      <h1 class="logo">NaviNest</h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="drop-btn">Categories ▼</a>
+            <div class="dropdown-content">
+              <a href="#">World</a>
+              <a href="#">Technology</a>
+              <a href="#">Business</a>
+            </div>
+          </li>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Health</a></li>
+        </ul>
+      </nav>
+      <!-- Search bar integrated with header (follows design system) -->
+      <form id="header-search" class="search-bar" role="search">
+        <input type="search" id="search-input" name="q" placeholder="Search articles, topics, authors..."
+          aria-label="Search">
+        <button type="submit" aria-label="Search button">Search</button>
+      </form>
+      <div class="header-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+        <div id="hamburger-menu" class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="#">Home</a>
+    <a href="#">World</a>
+    <a href="#">Technology</a>
+    <a href="#">Business</a>
+    <a href="#">Politics</a>
+    <a href="#">Health</a>
+  </div>
+
+  <div class="breaking-news">
+    <div class="container">
+      <span>BREAKING</span>
+      <p>Global markets show unexpected volatility following central bank announcements.</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <aside class="quick-access-menu">
+      <h2>Quick Access</h2>
+      <ul>
+        <li><a href="#">📈 Finance</a></li>
+        <li><a href="#">🎬 Entertainment</a></li>
+        <li><a href="#">⚽ Sports</a></li>
+        <li><a href="#">🔬 Science</a></li>
+        <li><a href="#">❤️ Lifestyle</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-feed">
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="top-stories">Top Stories</button>
+          <button class="tab-btn" data-tab="timeline">Timeline</button>
+          <button class="tab-btn" data-tab="favorite-tags">Favorite Tags</button>
+        </div>
+
+        <div class="tab-content active" id="top-stories-tab">
+          <section class="news-section">
+            <div class="card-grid" id="top-stories-grid">
+              <div class="card card-wide" data-reading-time>
+                <img src="https://placehold.co/400x225/1e3a5f/FFFFFF?text=Tech" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">5 min read</span>
+                    <span class="card-category">Technology</span>
+                  </div>
+                  <h3>Global Tech Summit Unveils New AI Innovations</h3>
+                  <p>Leaders in technology gathered to showcase groundbreaking advancements in artificial intelligence
+                    and
+                    machine learning.</p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div class="card" data-reading-time>
+                <img src="https://placehold.co/400x225/6B7280/FFFFFF?text=Finance" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">4 min read</span>
+                    <span class="card-category">Finance</span>
+                  </div>
+                  <h3>Market Reacts to New Economic Policies</h3>
+                  <p>Analysts discuss the potential impacts of the new fiscal strategy on global markets and
+                    investments.
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div class="card" data-reading-time>
+                <img src="https://placehold.co/400x225/5F7A5F/FFFFFF?text=Sports" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">3 min read</span>
+                    <span class="card-category">Sports</span>
+                  </div>
+                  <h3>Championship Finals End in a Thrilling Victory</h3>
+                  <p>The final match of the season concluded with a last-minute goal, securing the trophy for the
+                    underdogs.
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div class="card card-wide" data-reading-time>
+                <img src="https://placehold.co/400x225/1e3a5f/FFFFFF?text=Health" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">6 min read</span>
+                    <span class="card-category">Health</span>
+                  </div>
+                  <h3>New Study Links Diet to Improved Mental Clarity</h3>
+                  <p>Researchers find a strong correlation between a Mediterranean diet and cognitive function in older
+                    adults.</p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div class="card card-wide" data-reading-time>
+                <img src="https://placehold.co/400x225/5F7A5F/FFFFFF?text=World" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">4 min read</span>
+                    <span class="card-category">World</span>
+                  </div>
+                  <h3>Diplomatic Talks Begin to Ease International Tensions</h3>
+                  <p>Delegates from several nations meet to discuss peaceful resolutions to ongoing global disputes.</p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div class="card" data-reading-time>
+                <img src="https://placehold.co/400x225/6B7280/FFFFFF?text=Culture" alt="Article Image">
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="reading-time">5 min read</span>
+                    <span class="card-category">Culture</span>
+                  </div>
+                  <h3>Museum Opens New Exhibit on Ancient Civilizations</h3>
+                  <p>A stunning collection of artifacts goes on display, offering a new window into history.</p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="timeline-tab">
+          <section class="news-section">
+            <div class="card-grid" id="timeline-grid">
+              <!-- Timeline content will be populated by JavaScript -->
+            </div>
+            <div class="load-more-container">
+              <button id="timeline-load-more" class="load-more-btn">Load More</button>
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="favorite-tags-tab">
+          <section class="news-section">
+            <div class="card-grid" id="favorite-tags-grid">
+              <!-- Favorite Tags content will be populated by JavaScript -->
+            </div>
+            <div class="load-more-container">
+              <button id="favorite-tags-load-more" class="load-more-btn">Load More</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right sidebar (widgets, weather, login, ads) -->
+    <aside class="right-sidebar">
+      <div class="widget login-widget">
+        <h3>Login</h3>
+        <div class="login-buttons">
+          <button class="btn primary">Sign In</button>
+          <button class="btn">Register</button>
+        </div>
+      </div>
+
+      <div class="widget weather-widget">
+        <h3>Weather</h3>
+        <p class="weather-temp">24°C • Sunny</p>
+        <p class="weather-city">Lisbon</p>
+      </div>
+
+      <div class="widget promo-widget">
+        <h3>Sponsored</h3>
+        <img src="https://placehold.co/300x200/1e3a5f/FFFFFF?text=Ad" alt="Ad">
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 NaviNest. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top-btn" class="back-to-top-btn">▲</button>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

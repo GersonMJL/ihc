@@ -1,0 +1,9 @@
+/* Main stylesheet - imports all component stylesheets */
+
+@import url('./css/components/variables.css');
+@import url('./css/components/base.css');
+@import url('./css/components/header.css');
+@import url('./css/components/layout.css');
+@import url('./css/components/tabs.css');
+@import url('./css/components/cards.css');
+@import url('./css/components/footer.css');
