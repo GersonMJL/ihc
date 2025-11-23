@@ -1,98 +1,108 @@
-# NaviNest - News Hub
+# NaviNest News Hub
 
-A modern, responsive news hub application with a clean, modular architecture.
+Um hub de notícias moderno e responsivo com uma arquitetura limpa e modular.
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 ihc/
-├── index.html              # Main HTML file
-├── style.css               # Main stylesheet (imports component styles)
+├── index.html              Arquivo HTML principal
+├── style.css               Estilo principal que importa os estilos dos componentes
 ├── js/
-│   ├── main.js            # Application entry point
+│   ├── main.js            Ponto de entrada da aplicação
 │   └── modules/
-│       ├── navigation.js  # Mobile navigation functionality
-│       ├── darkMode.js    # Dark mode toggle
-│       ├── backToTop.js   # Back to top button
-│       ├── search.js      # Search functionality
-│       ├── cards.js       # Card creation and animations
-│       ├── tabs.js        # Tabs and content loading
-│       ├── scroll.js      # Scroll handling and infinite loading
-│       └── utils.js        # Utility functions
+│       ├── navigation.js  Função da navegação móvel
+│       ├── darkMode.js    Alternância de modo escuro
+│       ├── backToTop.js   Botão de voltar ao topo
+│       ├── search.js      Função de busca
+│       ├── cards.js       Criação de cards e animações
+│       ├── tabs.js        Abas e carregamento de conteúdo
+│       ├── scroll.js      Controle de rolagem e carregamento infinito
+│       └── utils.js       Funções utilitárias
 ├── css/
 │   └── components/
-│       ├── variables.css   # CSS variables and theme definitions
-│       ├── base.css        # Base styles
-│       ├── header.css      # Header and navigation styles
-│       ├── layout.css      # Layout and sidebar styles
-│       ├── tabs.css        # Tabs and load more button styles
-│       ├── cards.css       # Card and article styles
-│       └── footer.css      # Footer and back to top button styles
+│       ├── variables.css   Variáveis CSS e definições de tema
+│       ├── base.css        Estilos básicos
+│       ├── header.css      Estilos do cabeçalho e navegação
+│       ├── layout.css      Layout e barra lateral
+│       ├── tabs.css        Estilos das abas e botão de carregar mais
+│       ├── cards.css       Estilos de cards e artigos
+│       └── footer.css      Rodapé e botão de voltar ao topo
 └── data/
-    ├── timelineData.js     # Timeline news articles data
-    └── favoriteTagsData.js # Favorite tags articles data
+    ├── timelineData.js     Dados de artigos da linha do tempo
+    └── favoriteTagsData.js Dados de artigos de tags favoritas
 ```
 
-## Features
+## Funcionalidades
 
-- **Modular Architecture**: Code is organized into logical modules for better maintainability
-- **Component-Based CSS**: Styles are split into component files for easier management
-- **Dark Mode**: Toggle between light and dark themes with persistent storage
-- **Responsive Design**: Mobile-first approach with hamburger menu for small screens
-- **Infinite Scroll**: Automatic loading of content as user scrolls
-- **Tab Navigation**: Three tabs (Top Stories, Timeline, Favorite Tags)
-- **Card Animations**: Smooth fade-in animations for article cards
-- **Reading Time Calculator**: Automatically calculates reading time for articles
+* **Arquitetura modular**: Código organizado em módulos para facilitar a manutenção
+* **CSS baseado em componentes**: Estilos divididos em arquivos menores para facilitar o controle
+* **Modo escuro**: Alternância entre temas claro e escuro com armazenamento persistente
+* **Layout responsivo**: Focado em dispositivos móveis com menu tipo hambúrguer para telas pequenas
+* **Rolagem infinita**: Carregamento automático de conteúdo conforme a rolagem
+* **Navegação por abas**: Três abas, Top Stories, Timeline e Favorite Tags
+* **Animações nos cards**: Animações suaves de entrada para os artigos
+* **Cálculo de tempo de leitura**: Tempo de leitura gerado de forma automática
 
-## Getting Started
+## Como Começar
 
-Simply open `index.html` in a modern web browser. The application uses ES6 modules, so it requires a local server for development (due to CORS restrictions with file:// protocol).
+Basta abrir o arquivo `index.html` em um navegador moderno. A aplicação usa módulos ES6, por isso é necessário um servidor local para desenvolvimento, já que o protocolo file:// tem limitações de CORS.
 
-### Using a Local Server
+### Usando um Servidor Local
 
-You can use any of these methods:
+Você pode usar qualquer um destes métodos:
 
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Node.js (with http-server)
+# Node.js (com http-server)
 npx http-server
 
 # PHP
 php -S localhost:8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Depois abra `http://localhost:8000` no navegador.
 
-## Module Overview
+## Imagens do Design no Figma
 
-### JavaScript Modules
+![Light Mode](img/light.png)
+![Dark Mode](img/dark.png)
 
-- **main.js**: Initializes all modules when DOM is ready
-- **navigation.js**: Handles mobile hamburger menu toggle
-- **darkMode.js**: Manages theme switching and localStorage persistence
-- **backToTop.js**: Shows/hides and handles back to top button
-- **search.js**: Handles search form submission
-- **cards.js**: Creates card elements, handles animations, and reading time calculation
-- **tabs.js**: Manages tab switching, content loading, and "Load More" functionality
-- **scroll.js**: Handles infinite scroll loading
-- **utils.js**: Shared utility functions (reading time, time formatting)
+## Visão Geral dos Módulos
 
-### CSS Components
+### Módulos JavaScript
 
-- **variables.css**: CSS custom properties for theming (light/dark mode)
-- **base.css**: Base styles for body and container
-- **header.css**: Header, navigation, search bar, and mobile menu styles
-- **layout.css**: Main layout, sidebars, and widgets
-- **tabs.css**: Tab navigation and load more button styles
-- **cards.css**: Card grid, article cards, and related articles
-- **footer.css**: Footer and back to top button styles
+* **main.js**: Inicia todos os módulos quando o DOM está pronto
+* **navigation.js**: Controla o menu móvel
+* **darkMode.js**: Gerencia a troca de tema e o uso de localStorage
+* **backToTop.js**: Mostra e oculta o botão de voltar ao topo e trata sua ação
+* **search.js**: Lida com o envio do formulário de busca
+* **cards.js**: Cria os cards, controla animações e calcula o tempo de leitura
+* **tabs.js**: Gerencia as abas, o carregamento de conteúdo e a função de carregar mais
+* **scroll.js**: Controla o carregamento com rolagem infinita
+* **utils.js**: Funções utilitárias como cálculo de leitura e formatação de tempo
 
-## Browser Support
+### Componentes CSS
 
-Requires modern browsers with ES6 module support:
-- Chrome 61+
-- Firefox 60+
-- Safari 10.1+
-- Edge 16+
+* **variables.css**: Propriedades personalizadas para temas claro e escuro
+* **base.css**: Estilos básicos para o corpo e contêiner
+* **header.css**: Cabeçalho, navegação, busca e menu móvel
+* **layout.css**: Estrutura principal, barras laterais e widgets
+* **tabs.css**: Navegação por abas e botão de carregar mais
+* **cards.css**: Grade de cards, artigos e artigos relacionados
+* **footer.css**: Rodapé e botão de voltar ao topo
+
+## Suporte dos Navegadores
+
+Requer navegadores modernos com suporte a módulos ES6
+
+* Chrome 61+
+* Firefox 60+
+* Safari 10.1+
+* Edge 16+
+
+## Autor
+
+Desenvolvido por Gerson Leite.
